@@ -43,11 +43,18 @@ public class MyBatisPlusConfig {
      * @return: com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor
      */
     @Bean
-    @Profile({"david","gradual","test"})// 设置 dev test 环境开启
+    @Profile({"test"})// 设置 dev test 环境开启
     public PerformanceInterceptor performanceInterceptor() {
         return new PerformanceInterceptor();
     }
 
+    /**
+     * 逻辑删除用
+     *
+     * @author David Hong
+     *
+     * @return com.baomidou.mybatisplus.core.injector.ISqlInjector
+     */
     @Bean
     public ISqlInjector sqlInjector() {
         return new LogicSqlInjector();

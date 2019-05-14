@@ -1,6 +1,8 @@
 spring:
   datasource:
+    # 配置数据源
     driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://127.0.0.1:3306/demo_druid?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
     username: root
@@ -35,7 +37,7 @@ spring:
         url-pattern: /*
         exclusions: '*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*'
 
-      # StatViewServlet配置，说明请参考Druid Wiki，配置_StatViewServlet配置
+      # 管理后台的url和登录账号密码
       stat-view-servlet:
         enabled: true
         url-pattern: /druid/*

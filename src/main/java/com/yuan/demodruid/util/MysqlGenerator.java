@@ -107,6 +107,8 @@ public class MysqlGenerator {
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
+        // 设置逻辑删除键
+        strategy.setLogicDeleteFieldName("deleted");
         strategy.setInclude("mp_user");
         //strategy.setSuperEntityColumns("id");
         //驼峰转连字符
